@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#echo "The total number of processes running is:"
+
+#Write to the logfile
+#ps -ef | wc -l > /home/eaauser/eaa/week1/logs/logs2.txt
+
+#capture the output of ps -ef
+#and store in variabl cmd
+
+cmd=`ps -ef | wc -l`
+
+#echo "The total number of processes running is: $cmd"
+
+#if statement to see if cmd
+#exceeds some limit
+
+if [ "$cmd" -gt "$1" ]
+then
+	echo "Total number of processes ($cmd)exceeds the limit" > /home/eaauser/eaa/week1/logs/logs2.txt
+fi
