@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# store the number of process
+
+# into variable cnt
+#total number of processes in total
+cntall=`ps -ef | wc -l`
+echo "Total number of processes $cntall"
+
+#total number of root processes
+cntroot=`ps -ef | grep root | wc -l`
+echo "Total number of root processes $cntroot"
+
+#
+count=`expr $cntall - $cntroot`
+echo $count
+
+#alt
+#nonroot=$((cntall - cntroot))
+
+#bash integer equality operator
+#
+if [ "$count" -gt "$1" ];
+then
+	echo "oh shit ($coount)" >> /home/eaauser/eaa/week2/logs/logs2.txt
+fi
