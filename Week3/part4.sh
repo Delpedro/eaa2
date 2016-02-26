@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #read one line from the user
 #location = $HOME/logs
 
@@ -32,3 +31,4 @@ echo "you are thinking" $var
 # doesnt exist
 
 echo `date` "$var" >> $HOME/logs/diary.txt
+
