@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 
 #read one line from the user
@@ -18,11 +18,12 @@ echo $var
 
 echo `date` "$var" >> $HOME/logs/diary.txt
 
-# -d if its a directory that exists
+# -d is if the directory actually exists
 if [ -d $HOME/logs]
 
 then
 	echo "directory exists"
 else
+	echo "directory does not exit, making it now....."
 	mkdir $HOME/logs
 fi
