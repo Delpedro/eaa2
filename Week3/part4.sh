@@ -11,12 +11,7 @@
 # -p flag = 
 # read = read from the keyboard in the new line (Waits for entire string)
 
-
-read -p "Tells us your thoughts" var
-
 echo $var
-
-echo `date` "$var" >> $HOME/logs/diary.txt
 
 # -d is if the directory actually exists
 if [ -d $HOME/logs]
@@ -27,3 +22,13 @@ else
 	echo "directory does not exit, making it now....."
 	mkdir $HOME/logs
 fi
+
+read -p "Tells us your thoughts" var
+
+echo "you are thinking" $var
+
+# no need to test that diary.txt exists
+# as the >> (redirect) creates the file it it
+# doesnt exist
+
+echo `date` "$var" >> $HOME/logs/diary.txt
