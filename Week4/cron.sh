@@ -15,8 +15,11 @@ tar czf week4backup.tar.gz $HOME/eaa/Week4
 mv week4backup.tar.gz $HOME/backups
 
 
-
+#crontab -e
+#insert (i)
 #45 20 * * * /home/eaauser/eaa/Week4/./cron.sh
+#esc
+#:wq
 
 
 
