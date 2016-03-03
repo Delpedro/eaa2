@@ -16,6 +16,9 @@ mv week4backup.tar.gz $HOME/backups
 
 
 
+#45 20 * * * /home/eaauser/eaa/Week4/./cron.sh
+
+
 
 
 

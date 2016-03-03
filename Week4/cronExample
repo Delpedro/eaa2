@@ -1,0 +1,7 @@
+#!/bin/bash
+
+crontab -e
+
+20 * * * * $HOME/myfile.sh
+
+chmod u+x $HOME/myfile.sh
