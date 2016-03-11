@@ -1,6 +1,7 @@
 # assign the cpu data to a
 # vector called x
-
+# this process works for tiny data sets but for large data sets we need to read from the
+# file system
 x <- c(55,56,98,100,15,12,33,45,32,67,82,19,25)
 
 
@@ -16,5 +17,7 @@ dev.off()
 summary(x)
 
 
-plot(100 - x, type="l", xlab="Timestamp", ylab="%BUSY", main="CPU Busy DATA")
+plot(100 - x, type="l", xlab="Timestamp", ylab="%Busy", main="CPU Busy DATA")
 
+
+# read.table to read in large file of CPU stats
